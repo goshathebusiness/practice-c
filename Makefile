@@ -14,7 +14,7 @@ createdynamiclib:
 	@rm *.o
 
 labcompile:
-	@if [ $(number) != 3 ] && [ $(number) != 4 ] && [ $(number) != 7 ]; then \
+	@if ([ $(number) != 3 ] && [ $(number) != 4 ] && [ $(number) != 7 ]); then \
 		gcc -c $(number)/main.c; \
 		gcc -o temp main.o -L ./ -lstatic -lm; \
 		./temp; \
